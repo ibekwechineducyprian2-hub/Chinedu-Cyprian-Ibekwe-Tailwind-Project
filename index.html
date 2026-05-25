@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHITECH - Build Your Digital Future</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-blue': '#0f172a',
+            'blue-shade': '#152032',
+            'light-blue': '#3b82f6',
+            'purple': '#a855f7',
+            'green': '#22c55e'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-blue text-white font-sans">
+
+  <!-- 1. Navigation Bar -->
+  <header class="bg-dark-blue/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2 font-bold text-xl">
+          <span class="bg-light-blue p-1.5 rounded-lg">⚡</span>
+          ChiTech
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-gray-300">
+          <a href="#home" class="hover:text-light-blue transition">Home</a>
+          <a href="#services" class="hover:text-light-blue transition">Services</a>
+          <a href="#about" class="hover:text-light-blue transition">About</a>
+          <a href="#contact" class="hover:text-light-blue transition">Contact</a>
+        </nav>
+
+        <button class="hidden md:block bg-light-blue hover:bg-blue-600 px-5 py-2 rounded-lg font-medium transition">
+          Get Started
+        </button>
+
+        <!-- Mobile Hamburger -->
+        <buttonid="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-blue-shade">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <nav class="flex flex-col gap-4 text-gray-300">
+          <a href="#home" class="hover:text-light-blue">Home</a>
+          <a href="#services" class="hover:text-light-blue">Services</a>
+          <a href="#about" class="hover:text-light-blue">About</a>
+          <a href="#contact" class="hover:text-light-blue">Contact</a>
+          <button class="bg-light-blue hover:bg-blue-600 px-5 py-2 rounded-lg font-medium w-fit">
+            Get Started
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section id="home" class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Build Your <span class="text-light-blue">Digital</span> Future
+        </h1>
+        <p class="text-gray-400 mt-6 text-lg">
+          Transform your business with cutting-edge solutions that drive growth and innovation in the digital landscape.
+        </p>
+        <div class="mt-8 flex-wrap gap-4">
+          <button class="bg-light-blue hover:bg-blue-600 px-6 py-3 rounded-lg font-medium transition">
+            Start Your Journey
+          </button>
+          <button class="border border-gray-700 hover:bg-blue-shade px-6 py-3 rounded-lg font-medium transition">
+            Learn More
+          </button>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-2xl shadow-light-blue/20">
+        <img src="images/hero-image.png" alt="image" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Services Section -->
+  <section id="services" class="bg-blue-shade py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Our Services</h2>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+        We provide comprehensive solutions to help your business thrive in the digital age
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <!-- Card 1 -->
+        <div class="bg-dark-blue p-6 rounded-xl text-left hover:border hover:border-gray-700 transition">
+          <div class="w-12 h-12 bg-light-blue/20 text-light-blue flex items-center justify-center rounded-lg mb-4">
+            &lt;/&gt;
+          </div>
+          <h3 class="text-xl font-semibold">Web Development</h3>
+          <p class="text-gray-400 mt-2">Custom websites and web applications built with modern technologies for optimal performance.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-dark-blue p-6 rounded-xl text-left hover:border hover:border-gray-700 transition">
+          <div class="w-12 h-12 bg-green/20 text-green flex items-center justify-center rounded-lg mb-4">
+            📱
+          </div>
+          <h3 class="text-xl font-semibold">Mobile Apps</h3>
+          <p class="text-gray-400 mt-2">Native and cross-platform mobile applications that deliver exceptional user experiences.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-dark-blue p-6 rounded-xl text-left hover:border hover:border-gray-700 transition">
+          <div class="w-12 h-12 bg-purple/20 text-purple flex items-center justify-center rounded-lg mb-4">
+            📈
+          </div>
+          <h3 class="text-xl font-semibold">Digital Marketing</h3>
+          <p class="text-gray-400 mt-2">Strategic marketing campaigns that boost your online presence and drive conversions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. About Section -->
+  <section id="about" class="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="rounded-2xl overflow-hidden">
+        <img src="images/about-image (1).png" alt="Team working" class="w-full h-full object-cover">
+      </div>
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold">About ChiTech</h2>
+        <p class="text-gray-400 mt-6">
+          We are a forward-thinking technology company dedicated to helping businesses navigate the digital transformation journey. With years of experience and a passion for innovation, we deliver solutions that matter.
+        </p>
+        <div class="flex gap-12 mt-8">
+          <div>
+            <h3 class="text-3xl font-bold text-light-blue">150+</h3>
+            <p class="text-gray-400">Projects Completed</p>
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold text-light-blue">98%</h3>
+            <p class="text-gray-400">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Contact Section -->
+  <section id="contact" class="bg-blue-shade py-20">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Get In Touch</h2>
+      <p class="text-gray-400 mt-4">
+        Ready to start your project? Let's discuss how we can help you achieve your goals.
+      </p>
+
+      <div class="bg-dark-blue mt-12 p-8 rounded-xl text-left grid md:grid-cols-2 gap-8">
+        <!-- Contact Info -->
+        <div class="space-y-4 text-gray-300">
+          <p class="flex items-center gap-3">📧 hello@chitech.com</p>
+          <p class="flex items-center gap-3">📞 +042 (234) 123-4567</p>
+          <p class="flex items-center gap-3">📍 123 Business Ave, ChiTech City</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" required
+            class="w-full px-4 py-3 bg-blue-shade border-gray-700 rounded-lg focus:outline-none focus:border-light-blue">
+          <input type="email" placeholder="Your Email" required
+            class="w-full px-4 py-3 bg-blue-shade border-gray-700 rounded-lg focus:outline-none focus:border-light-blue">
+          <textarea placeholder="Your Message" rows="4" required
+            class="w-full px-4 py-3 bg-blue-shade border-gray-700 rounded-lg focus:outline-none focus:border-light-blue"></textarea>
+          <button type="submit"
+            class="w-full bg-light-blue hover:bg-blue-600 py-3 rounded-lg font-medium transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Footer -->
+  <footer class="border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2 font-bold text-lg">
+        <span class="bg-light-blue p-1.5 rounded-lg">⚡</span>
+        ChiTech
+      </div>
+      <p class="text-gray-500 text-sm">© 2026 ChiTech. All rights reserved.</p>
+      <div class="flex gap-4 text-gray-400">
+        <a href="#" class="hover:text-light-blue">𝕏</a>
+        <a href="#" class="hover:text-light-blue">in</a>
+        <a href="#" class="hover:text-light-blue">Tiktok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
